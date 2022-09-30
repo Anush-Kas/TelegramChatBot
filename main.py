@@ -1,10 +1,11 @@
 import telebot
 import requests
 import json
-import key
+from key import TOKEN
+impor
 
 
-bot = telebot.TeleBot(key.TOKEN)
+bot = telebot.TeleBot(TOKEN)
 
 keys = {
         "рубль" : "RUB",
@@ -19,6 +20,15 @@ def help(message: telebot.types.Message):
 <в какую валюту перевести> \
 <количество переводимой валюты>\nУвидеть список всех доступных валют: /values"
     bot.reply_to(message, text)
+
+
+@bot.message_handler(commands=["values"])
+def values(message: telebot.types.Message):
+    text = "Доступные валюты:"
+    for key in keys.keys():
+        text = "\n".join((text, key, ))
+    bot.reply_to(message, text)
+
 
 
 # Press the green button in the gutter to run the script.
