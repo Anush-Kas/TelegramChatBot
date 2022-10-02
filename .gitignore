@@ -1,4 +1,7 @@
 key.py
+key
+config
+config.py
 .DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -16,6 +19,7 @@ dist/
 downloads/
 eggs/
 .eggs/
+bin/
 lib/
 lib64/
 parts/
