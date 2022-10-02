@@ -1,5 +1,5 @@
 import telebot
-from key import keys, TOKEN
+from key import TOKEN
 from extensions import Conversion, ConversionException
 
 bot = telebot.TeleBot(TOKEN)

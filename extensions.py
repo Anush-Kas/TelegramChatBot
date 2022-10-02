@@ -1,6 +1,5 @@
 import requests
 import json
-from key import keys
 
 
 class ConversionException(Exception):
